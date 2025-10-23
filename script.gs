@@ -34,7 +34,7 @@ function blockerize() {
   let selectedElements = presentation.getSelection().getPageElementRange().getPageElements();
 
   for (let i = 0; i < selectedElements.length; i++)
-    selectedElements[i].asImage().setWidth(itemDimensions).setHeight(blockDimensions);
+    selectedElements[i].asImage().setWidth(blockDimensions).setHeight(blockDimensions);
 }
 
 // Align selected items to the item grid
