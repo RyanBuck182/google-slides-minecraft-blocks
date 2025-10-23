@@ -25,8 +25,7 @@ function itemize() {
   let selectedElements = presentation.getSelection().getPageElementRange().getPageElements();
 
   for (let i = 0; i < selectedElements.length; i++)
-    // if (selectedElements[i].getPageElementType() == SlidesApp.PageElementType.IMAGE)
-      selectedElements[i].asImage().setWidth(itemDimensions).setHeight(itemDimensions);
+    selectedElements[i].asImage().setWidth(itemDimensions).setHeight(itemDimensions);
 }
 
 // Set dimensions (width & height) of selected elements to that of a block
@@ -35,8 +34,7 @@ function blockerize() {
   let selectedElements = presentation.getSelection().getPageElementRange().getPageElements();
 
   for (let i = 0; i < selectedElements.length; i++)
-    // if (selectedElements[i].getPageElementType() == SlidesApp.PageElementType.IMAGE)
-      selectedElements[i].asImage().setWidth(itemDimensions).setHeight(blockDimensions);
+    selectedElements[i].asImage().setWidth(itemDimensions).setHeight(blockDimensions);
 }
 
 // Align selected items to the item grid
