@@ -4,6 +4,7 @@ const itemDimensions = blockDimensions / 2;
 const destroy2URL = 'https://i.imgur.com/DD83v43.png';
 const destroy5URL = 'https://i.imgur.com/X7YMadV.png';
 
+// Create the menu in google slides
 function onOpen() {
   let ui = SlidesApp.getUi();
 
@@ -18,6 +19,7 @@ function onOpen() {
     .addToUi();
 }
 
+// Set dimensions (width & height) of selected elements to that of an item
 function itemize() {
   let presentation = SlidesApp.getActivePresentation();
   let selectedElements = presentation.getSelection().getPageElementRange().getPageElements();
@@ -27,6 +29,7 @@ function itemize() {
       selectedElements[i].asImage().setWidth(itemDimensions).setHeight(itemDimensions);
 }
 
+// Set dimensions (width & height) of selected elements to that of a block
 function blockerize() {
   let presentation = SlidesApp.getActivePresentation();
   let selectedElements = presentation.getSelection().getPageElementRange().getPageElements();
@@ -36,6 +39,7 @@ function blockerize() {
       selectedElements[i].asImage().setWidth(itemDimensions).setHeight(blockDimensions);
 }
 
+// Align selected items to the item grid
 function griderizeItem() {
   let presentation = SlidesApp.getActivePresentation();
   let selection = presentation.getSelection();
@@ -51,6 +55,7 @@ function griderizeItem() {
   }
 }
 
+// Align selected blocks to the block grid
 function griderizeBlock() {
   let presentation = SlidesApp.getActivePresentation();
   let selection = presentation.getSelection();
@@ -66,6 +71,7 @@ function griderizeBlock() {
   }
 }
   
+// Add damage2 decal to currently selected blocks
 function damage2() {
   let presentation = SlidesApp.getActivePresentation();
   let selection = presentation.getSelection();
@@ -78,6 +84,7 @@ function damage2() {
   }
 }
 
+// Add damage5 decal to currently selected blocks
 function damage5() {
   let presentation = SlidesApp.getActivePresentation();
   let selection = presentation.getSelection();
@@ -90,6 +97,7 @@ function damage5() {
   }
 }
 
+// Break selected block over multiple slides, applying damage2, then damage5, then deleting the block
 function killBlock2() {
   let presentation = SlidesApp.getActivePresentation();
   let selection = presentation.getSelection();
